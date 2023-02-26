@@ -10,10 +10,6 @@ const RoutingControl = ({ locations }) => {
   useEffect(() => {
     if (!locations) return;
     const control = L.Routing.control({
-      router: L.Routing.graphHopper(
-        import.meta.env.VITE_GRAPHHOPPER_API_KEY,
-        {}
-      ),
       routeWhileDragging: false,
       showAlternatives: false,
       waypoints: [
