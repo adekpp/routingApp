@@ -3,14 +3,17 @@ import L from "leaflet";
 import "leaflet-routing-machine";
 import { useContext, useEffect } from "react";
 import { TripContext } from "../context/TripContext";
-const graphHopperApiKey = process.env.VITE_APP_GRAPHHOPPER_API_KEY;
+
 const RoutingControl = ({ locations }) => {
   const map = useMap();
   const { updateState } = useContext(TripContext);
   useEffect(() => {
     if (!locations) return;
     const control = L.Routing.control({
-      router: L.Routing.graphHopper(graphHopperApiKey, {}),
+      router: L.Routing.graphHopper(
+        import.meta.env.VITE_GRAPHHOPPER_API_KEY,
+        {}
+      ),
       routeWhileDragging: false,
       showAlternatives: false,
       waypoints: [
