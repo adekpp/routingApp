@@ -1,6 +1,6 @@
 import { useContext, useRef, useState } from "react";
-import { TripContext } from "./context/TripContext";
-import useCalculateTripCosts from "./hooks/useCalculateTripCosts";
+import { TripContext } from "../context/TripContext";
+import useCalculateTripCosts from "../hooks/useCalculateTripCosts";
 import PdfButton from "./PdfButton";
 
 export default function AppBar() {

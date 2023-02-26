@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { TripContext } from "./context/TripContext";
-import { generatePdf } from "./lib/generatePdf";
+import { TripContext } from "../context/TripContext";
+import { generatePdf } from "../lib/generatePdf";
 export default function PdfButton({cost, distance}) {
   const { routeInstructions } = useContext(TripContext);
   if (routeInstructions.length === 0) return null;

@@ -3,10 +3,9 @@ import "leaflet-routing-machine";
 import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
 import "lrm-graphhopper";
 import { useEffect, useRef } from "react";
-
 import { useLocation, useNavigate } from "react-router-dom";
-import AppBar from "./AppBar";
-import RoutingControl from "./RoutingControl";
+import AppBar from "./components/AppBar";
+import RoutingControl from "./components/RoutingControl";
 
 function Map() {
   const navigate = useNavigate();

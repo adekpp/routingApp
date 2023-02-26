@@ -2,7 +2,7 @@ import { useMap } from "react-leaflet";
 import L from "leaflet";
 import "leaflet-routing-machine";
 import { useContext, useEffect } from "react";
-import { TripContext } from "./context/TripContext";
+import { TripContext } from "../context/TripContext";
 const graphHopperApiKey = process.env.VITE_APP_GRAPHHOPPER_API_KEY;
 const RoutingControl = ({ locations }) => {
   const map = useMap();
